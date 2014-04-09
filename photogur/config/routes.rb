@@ -1,16 +1,16 @@
 Photogur::Application.routes.draw do
-  
-  delete 'pictures/:id' =>'pictures#destroy',as: "delete_picture"
+  resources :pictures
+  # delete 'pictures/:id' =>'pictures#destroy',as: "delete_picture"
   root :to => "pictures#index"
-  get 'pictures' =>'pictures#index'
+  # get 'pictures' =>'pictures#index'
 
-  get 'pictures/:id/edit' =>'pictures#edit', as: "edit_picture" 
-  patch 'pictures/:id' =>'pictures#update'
+  # get 'pictures/:id/edit' =>'pictures#edit', as: "edit_picture" 
+  # patch 'pictures/:id' =>'pictures#update'
    
-  post 'pictures' =>"pictures#create"
-  get 'pictures/new' => 'pictures#new'
+  # post 'pictures' =>"pictures#create"
+  # get 'pictures/new' => 'pictures#new'
 
-  get 'pictures/:id' =>'pictures#show', as: "picture"
+  # get 'pictures/:id' =>'pictures#show', as: "picture"
   
   # get 'pictures/0' =>'pictures#picture0'
   # get 'pictures/1' =>'pictures#picture1'
