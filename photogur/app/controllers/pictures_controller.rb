@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
+    @created_now = Picture.created_before(Time.now)
+  
   end
 
   def show
